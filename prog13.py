@@ -1,27 +1,21 @@
 class ContaBancaria:
-
     def __init__(self, titular):
         self.titular = titular
         self.saldo = 0.0
 
     def depositar(self, valor):
         self.saldo += valor
-        print(f"Novo saldo: R$ {self.saldo:.2f}")
+        print(f'Você depositou R${valor}. Saldo atual: R${self.saldo}.')
 
     def sacar(self, valor):
-        if valor <= self.saldo:
-            self.saldo -= valor
-            print(f"Valor sacado: R$ {valor:.2f}")
+        if valor>self.saldo:
+            print('Saldo insuficiente :(')
         else:
-            print("Saque negado: Saldo insuficiente.")
+            self.saldo -= valor
+            print(f'Saque de R${valor} realizado com sucesso. Saldo atual: R${self.saldo}.')
 
-
-conta = ContaBancaria("Guilherme")
+conta = ContaBancaria('Guilherme')
 
 conta.depositar(100)
-
 conta.sacar(150)
-
 conta.sacar(50)
-
-print(f"Saldo final: R$ {conta.saldo:.2f}")
