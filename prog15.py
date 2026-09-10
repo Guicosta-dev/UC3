@@ -19,7 +19,7 @@ class Livro:
     def devolver(self):
         if not self.disponivel:
             self.disponivel = True
-            self.historico_emprestimos[-1] + " - DEVOLVIDO"
+            self.historico_emprestimos[-1] += " - DEVOLVIDO"
         #else:
             #print('Vo')
 
