@@ -20,8 +20,7 @@ class Livro:
         if not self.disponivel:
             self.disponivel = True
             self.historico_emprestimos[-1] += " - DEVOLVIDO"
-        #else:
-            #print('Vo')
+        
 
     def exibir_historico(self):
         for item in self.historico_emprestimos:
