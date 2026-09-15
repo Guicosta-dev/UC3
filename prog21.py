@@ -4,8 +4,7 @@ class AssinaturaBase:
         self.usuario = usuario
               
     def calcular_preco(self):
-        valor = 0
-        return valor
+        return 0.00
 
 class AssinaturaPremium(AssinaturaBase):
     plano = "Premium"
